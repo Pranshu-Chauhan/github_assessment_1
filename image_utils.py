@@ -5,10 +5,16 @@ def read_image(path):
     return path
 
 def convert_to_grayscale(img):
+    if img is None:
+        raise ValueError("No image provided")
     print("Converting image to grayscale")
+    return "grayscale_image"
 
 def show_image(img):
-    print("Showing image")
+    if img is None:
+        print("Nothing to display")
+        return
+    print(f"Displaying {img}")
 
 def save_image(img, path):
     print(f"Saving image to {path}")
